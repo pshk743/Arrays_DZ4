@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        /* Задание 1
+        // Задание 1
         Scanner scanner = new Scanner(System.in);
         int size = scanner.nextInt();
         int[] array = new int[size];
@@ -18,7 +18,7 @@ public class Main {
 
         for (int i = size - 1; i >= 0; i--) {
             System.out.print(array[i] + " ");
-        } */
+        }
 
         /* Задание 2
         int size = 10;
