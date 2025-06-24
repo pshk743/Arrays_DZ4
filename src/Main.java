@@ -1,8 +1,9 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        // Задание 1
+        /* Задание 1
         Scanner scanner = new Scanner(System.in);
         int size = scanner.nextInt();
         int[] array = new int[size];
@@ -18,7 +19,7 @@ public class Main {
 
         for (int i = size - 1; i >= 0; i--) {
             System.out.print(array[i] + " ");
-        }
+        } */
 
         /* Задание 2
         int size = 10;
@@ -135,29 +136,28 @@ public class Main {
             System.out.println("Массив не является возрастающей последовательностью");
         } */
 
-        /* Доп задание 1
-        Scanner sсanner = new Scanner(System.in);
-        int n = sсanner.nextInt();
+        // Доп задание 1
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
         int[] a = new int[n];
 
         for (int i = 0; i < n; i++) {
-            a[i] = sсanner.nextInt();
+            a[i] = scanner.nextInt();
         }
 
         for (int i = n - 1; i >= 0; i--) {
             if (a[i] != 9) {
                 a[i]++;
-                for (int j = 0; j < n; j++) {
-                    System.out.print(a[j] + " ");
+                for (int j = i + 1; j < n; j++) {
+                    a[j] = 0;
                 }
+                System.out.println(Arrays.toString(a));
                 return;
             }
-            a[i] = 0;
         }
 
-        System.out.print("1 ");
-        for (int i = 0; i < n; i++) {
-            System.out.print("0 ");
-        } */
+        int[] result = new int[n + 1];
+        result[0] = 1;
+        System.out.println(Arrays.toString(result));
     }
 }
